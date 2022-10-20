@@ -1,7 +1,7 @@
 {
-  "name": "project2",
+  "name": "awcse341",
   "version": "1.0.0",
-  "description": "project2 cse341",
+  "description": "Run npm install and npm start from the backend folder in the terminal",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,21 +14,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awarbler/project2CSE341.git"
+    "url": "git+https://github.com/awarbler/awcse341.git"
   },
   "keywords": [],
   "author": "Anita Woodford",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/awarbler/project2CSE341/issues"
+    "url": "https://github.com/awarbler/awcse341/issues"
   },
-  "homepage": "https://github.com/awarbler/project2CSE341#readme",
+  "homepage": "https://github.com/awarbler/awcse341#readme",
   "dependencies": {
-    "body-parser": "^1.20.1",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
     "mongodb": "^4.10.0",
-    "swagger-ui-express": "^4.5.0"
+    "swagger-ui-express": "^4.5.0",
+    "swagger-autogen": "^2.22.0"
   },
   "devDependencies": {
     "eslint": "^8.24.0",
@@ -39,4 +40,3 @@
     "swagger-autogen": "^2.22.0"
   }
 }
-
