@@ -11,7 +11,7 @@ router.use('/contacts', require('./contacts'));
 // const router = (router) => {
 //   router.use([openCors, express.json()]);
 //   router.use('/api-docs', require('./swagger'));
-//   router.use('/contacts', require('./contacts'));
+//   router.use('/contact', require('./contact'));
 //   return router;
 // };
 

@@ -2,8 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  // #swagger.description = 'Get all contacts'
-  const result = await mongodb.getDb().db('CSE341AW').collection('contacts').find();
+  // #swagger.description = 'Get all contact'
+  const result = await mongodb.getDb().db('CSE341AW').collection('contact').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -11,9 +11,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-  // #swagger.description = 'Get single contacts'
+  // #swagger.description = 'Get single contact'
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db('CSE341AW').collection('contacts').find({ _id: userId });
+  const result = await mongodb.getDb().db('CSE341AW').collection('contact').find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
@@ -30,7 +30,7 @@ const createContact = async (req, res) => {
     birthday: req.body.birthday
   };
 
-  const response = await mongodb.getDb().db('CSE341AW').collection('contacts').insertOne(contact);
+  const response = await mongodb.getDb().db('CSE341AW').collection('contact').insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -42,7 +42,7 @@ const updateContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
-    // #swagger.description = 'Update contacts'
+    // #swagger.description = 'Update contact'
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
@@ -52,7 +52,7 @@ const updateContact = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db('CSE341AW')
-    .collection('contacts')
+    .collection('contact')
     .replaceOne({ _id: userId }, contact);
   console.log(response);
   if (response.modifiedCount > 0) {
@@ -67,7 +67,7 @@ const deleteContact = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db('CSE341AW')
-    .collection('contacts')
+    .collection('contact')
     .remove({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {

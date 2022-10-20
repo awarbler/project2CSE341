@@ -1,0 +1,33 @@
+{
+    "contact": {
+       "firstName": "Chris",
+       "lastName": "Warbler",
+       "email": "ctxwarbler@aaaa.com",
+       "userName":"caw",
+       "favoriteColor": "green",
+       "birthday": "05/26/1973",
+       "password": "password"
+    },
+    "contact2": {
+        "firstName": "Missy",
+        "lastName": "Warbler",
+        "email": "txwarbler@aaaa.com",
+        "userName":"caw",
+        "favoriteColor": "green",
+        "birthday": "05/27/1973",
+        "password": "password"
+    },
+    "contact3": {
+        "firstName": "tommy",
+        "lastName": "Warbler",
+        "email": "ttxwarbler@aaaa.com",
+        "userName":"caw",
+        "favoriteColor": "green",
+        "birthday": "05/28/1973",
+        "password": "password"
+    }
+    
+
+    
+
+}
