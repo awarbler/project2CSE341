@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/contact/": {
       "get": {
         "description": "Get all contacts",
         "produces": [
@@ -69,7 +69,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/contact/{id}": {
       "get": {
         "description": "Get single contacts",
         "produces": [
