@@ -1,14 +1,13 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts API",
+    "title": "User API",
     "description": "A cool contacts api",
     "version": "1.0.0"
   },
   "host": "",
   "basePath": "/",
-  "schemes": ["http", "https"
-],
+  "schemes": ["http", "https"],
   "paths": {
     "/api-docs": {
       "get": {
@@ -38,19 +37,28 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "userName": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
                   "firstName": {
                     "example": "any"
                   },
                   "lastName": {
                     "example": "any"
                   },
-                  "email": {
-                    "example": "any"
-                  },
                   "favoriteColor": {
                     "example": "any"
                   },
                   "birthday": {
+                    "example": "any"
+                  },
+                  "language": {
                     "example": "any"
                   }
                 }
@@ -86,7 +94,7 @@
           }
         },
         "put": {
-          "description": "Update contact",
+          "description": "create contact",
           "parameters": [
             {
               "name": "id",
@@ -100,19 +108,28 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "userName": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
                   "firstName": {
                     "example": "any"
                   },
                   "lastName": {
                     "example": "any"
                   },
-                  "email": {
-                    "example": "any"
-                  },
                   "favoriteColor": {
                     "example": "any"
                   },
                   "birthday": {
+                    "example": "any"
+                  },
+                  "language": {
                     "example": "any"
                   }
                 }
