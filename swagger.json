@@ -5,22 +5,15 @@
     "description": "A cool contacts api",
     "version": "1.0.0"
   },
-  "host": "",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "http", "https"
+    "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/contacts/": {
       "get": {
-        "description": "Get all contacts",
+        "description": "Get all contact",
         "produces": [
           "application/json"
         ],
@@ -71,7 +64,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "Get single contacts",
+        "description": "Get single contact",
         "produces": [
           "application/json"
         ],
@@ -90,7 +83,7 @@
         }
       },
       "put": {
-        "description": "Update contacts",
+        "description": "Update contact",
         "parameters": [
           {
             "name": "id",
