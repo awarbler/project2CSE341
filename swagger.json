@@ -11,6 +11,14 @@
     "http", "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+  "paths": {
     "/contacts/": {
       "get": {
         "description": "Get all contact",
