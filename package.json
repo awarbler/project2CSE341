@@ -1,0 +1,19 @@
+{
+  "name": "project2cse341",
+  "version": "1.0.0",
+  "description": "Project 2 for CSE 341",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awarbler/project2CSE341.git"
+  },
+  "author": "Anita Woodford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awarbler/project2CSE341/issues"
+  },
+  "homepage": "https://github.com/awarbler/project2CSE341#readme"
+}
