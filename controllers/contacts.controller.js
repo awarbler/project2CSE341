@@ -23,11 +23,14 @@ const getSingle = async (req, res) => {
 const createContact = async (req, res) => {
   const contact = {
     // #swagger.description = 'create contact'
+    userName: req.body.userName,
+    password: req.body.password,
+    email: req.body.email,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
     favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    language: req.body.language
   };
 
   const response = await mongodb.getDb().db('CSE341AW').collection('contact').insertOne(contact);
@@ -42,12 +45,15 @@ const updateContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
-    // #swagger.description = 'Update contact'
+    // #swagger.description = 'create contact'
+    userName: req.body.userName,
+    password: req.body.password,
+    email: req.body.email,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
     favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    language: req.body.language
   };
   const response = await mongodb
     .getDb()
