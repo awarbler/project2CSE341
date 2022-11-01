@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.use('/api-docs', require('./swagger'));
 router.use('/contacts', require('./contacts'));
+router.use('/places', require('./places-routes'));
+router.use('/users'), require('./users-routes');
 
 // weston
 // const router = (router) => {
