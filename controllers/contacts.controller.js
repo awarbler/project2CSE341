@@ -6,7 +6,7 @@ const getAll = async (req, res) => {
   // #swagger.description = 'Get all contacts'
   mongodb
     // eslint-disable-next-line prettier/prettier
-  .getDb().db('CSE341AW').collection('contacts').find().toArray((err,lists) => {
+  .getDb().db('CSE341AW').collection('contact').find().toArray((err,lists) => {
       if (err) {
         res.status(400).json({ message: err });
       }
@@ -25,7 +25,7 @@ const getSingle = (req, res) => {
   mongodb
     .getDb()
     .db('CSE341AW')
-    .collection('contacts')
+    .collection('contact')
     .find({ _id: userId })
     .toArray((err, result) => {
       if (err) {
@@ -46,7 +46,7 @@ const createContact = async (req, res) => {
     birthday: req.body.birthday
   };
 
-  const response = await mongodb.getDb().db('CSE341AW').collection('contacts').insertOne(contact);
+  const response = await mongodb.getDb().db('CSE341AW').collection('contact').insertOne(contact);
   // error handler here
   if (response.acknowledged) {
     res.status(201).json(response);
