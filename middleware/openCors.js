@@ -1,8 +1,8 @@
 // brother d's work
-// const cors = require("cors");
+const cors = require('cors');
 
-// var corsOptions = {
-//   origin: "*",
-// };
+var corsOptions = {
+  origin: '*'
+};
 
-// module.exports = cors(corsOptions);
+module.exports = cors(corsOptions);

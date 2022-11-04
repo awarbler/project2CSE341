@@ -1,14 +1,29 @@
 const swaggerAutogen = require('swagger-autogen')();
+const appConfig = require('./config/app');
 
 // process.env.HOST
 
 const doc = {
   info: {
     title: 'Contacts API',
-    description: 'A cool contacts api'
   },
-  host: 'localhost:8080',
-  schemes: ['http']
+  host: '',
+  schemes: ['http','https'],
+  securityDefinitions: {
+    Authorization: {
+      type: "apiKey",
+      name: "Authorization",
+      in: "header",
+      description: "Authentication token (Bearer)",
+      example: "Bearer <your token>",
+     },
+    }
+  },
+  security: [
+    {
+      Authorization: [],
+    },
+  ],
 };
 
 const outputFile = 'swagger.json';
