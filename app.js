@@ -32,7 +32,7 @@ app.use((error, req, res, next) => {
 mongoose
     .connect('mongodb+srv://awarbler:jihduz-pytraw-0mEvmi@cse341aw.cmw2isx.mongodb.net/mern?retryWrites=true&w=majority')
     .then(() => {
-        app.listen(3000);
+        app.listen(8080);
     })
     .catch(err => {
         console.log(err);
