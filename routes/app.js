@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
+// const express = require('express');
+// const router = express.Router();
 
-router.get('/', function (req, res, next) {
-  res.redirect('/api-docs');
-});
-module.exports = router;
+// router.get('/', function (req, res, next) {
+//   res.redirect('/api-docs');
+// });
+// module.exports = router;

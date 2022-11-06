@@ -1,10 +1,21 @@
-const express = require('express');
-const router = express.Router();
-//westons way
-// const openCors = require("../middleware/openCors");
+const routes = require('express').Router();
+const place = require('./places-routes');
+// const express = require('express');
+// const router = express.Router();
+routes.use('/', require('./swagger'));
+routes.use('/places', place);
+routes.use(
+  '/'
+  // (docData = (req, res) => {
+  //   let docData = {
+  //     documentationURL: 'AJW Documentation'
+  //   };
+  //   res.send(docData);
+  // })
+);
 
-router.use('/api-docs', require('./swagger'));
-router.use('/places', require('./places-routes'));
+// router.use('/api-docs', require('./swagger'));
+// router.use('/places', require('./places-routes'));
 
 // weston
 // const router = (router) => {
@@ -13,5 +24,5 @@ router.use('/places', require('./places-routes'));
 //   router.use('/contacts', require('./contacts'));
 //   return router;
 // };
-
-module.exports = router;
+module.exports = routes;
+// module.exports = router;
