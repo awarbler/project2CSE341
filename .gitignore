@@ -1,6 +1,9 @@
 .DS_Store
 .env
 node_modules
+.prettierrc
+.eslintrc
+
 # Logs
 logs
 *.log
