@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
@@ -17,9 +17,24 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.0",
     "mongoose-unique-validator": "^3.1.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
-  }
+    "nodemon": "^2.0.20",
+    "swagger-autogen": "^2.20.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awarbler/project2CSE341.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/awarbler/project2CSE341/issues"
+  },
+  "homepage": "https://github.com/awarbler/project2CSE341#readme",
+  "description": ""
 }
