@@ -11,7 +11,14 @@
     "http"
   ],
   "paths": {
-    "/places/{pid}": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/api/places/{pid}": {
       "get": {
         "description": "",
         "parameters": [
@@ -76,7 +83,7 @@
         }
       }
     },
-    "/places/user/{uid}": {
+    "/api/places/user/{uid}": {
       "get": {
         "description": "",
         "parameters": [
@@ -94,7 +101,7 @@
         }
       }
     },
-    "/places/": {
+    "/api/places/": {
       "post": {
         "description": "",
         "parameters": [
@@ -127,7 +134,7 @@
         }
       }
     },
-    "/users/": {
+    "/api/users/": {
       "get": {
         "description": "",
         "parameters": [],
@@ -138,7 +145,7 @@
         }
       }
     },
-    "/users/signup": {
+    "/api/users/signup": {
       "post": {
         "description": "",
         "parameters": [
@@ -174,7 +181,7 @@
         }
       }
     },
-    "/users/login": {
+    "/api/users/login": {
       "post": {
         "description": "",
         "parameters": [
