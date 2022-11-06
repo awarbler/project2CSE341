@@ -1,6 +1,7 @@
 // get dependencies basic routing
 const express = require('express');
 const bodyParser = require('body-parser');
+// const cors = require('cors');
 const path = require('path');
 const http = require('http');
 const cookieParser = require('cookie-parser'); // do I need this?
@@ -69,7 +70,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (err, res) 
 });
 
 // Define the port address and tell express to use this port
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 app.set('port', port);
 
 // Create HTTP server.
