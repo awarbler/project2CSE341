@@ -2,14 +2,12 @@
   "swagger": "2.0",
   "info": {
     "title": "Users API",
-    "description": "A cool contacts api",
+    "description": "A Cool application that tracks places you want to visit",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "",
   "basePath": "/",
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["http", "https"],
   "paths": {
     "/api-docs": {
       "get": {
