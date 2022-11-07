@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
 // const cookieParser = require('cookie-parser'); // do I need this?
-const logger = require('morgan'); // w
+// const logger = require('morgan'); // w
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -29,7 +29,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)).use(
   })
 );
 // app.use(cookieParser());
-app.use(logger('dev')); // Tell express to use the Morgan logger
+// app.use(logger('dev')); // Tell express to use the Morgan logger
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
