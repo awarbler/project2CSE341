@@ -23,7 +23,7 @@ const app = express();
 // parses and converts
 app.use(bodyParser.json());
 
-app.use(
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)).use(
   express.urlencoded({
     extended: false
   })
