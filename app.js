@@ -1,7 +1,8 @@
+// const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 // const cors = require('cors');
-const path = require('path');
+// const path = require('path');
 const http = require('http');
 // const cookieParser = require('cookie-parser'); // do I need this?
 // const logger = require('morgan'); // w
@@ -23,14 +24,11 @@ const app = express();
 // parses and converts
 app.use(bodyParser.json());
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)).use(
-  express.urlencoded({
-    extended: false
-  })
-);
+app
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
 // app.use(logger('dev')); // Tell express to use the Morgan logger
-
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -62,7 +60,8 @@ app.use((error, req, res, next) => {
 mongoose.connect(
   process.env.MONGODB_URI,
   {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   },
   (err, res) => {
     if (err) {
