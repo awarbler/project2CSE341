@@ -14,7 +14,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
 // import the routing file to handle the default (index) route
-const index = require('./routes/app');
+// const index = require('./routes/app');
 const placesRoutes = require('./routes/places-routes');
 const usersRoutes = require('./routes/users-routes');
 const HttpError = require('./models/http-error');
@@ -44,8 +44,6 @@ app.use((req, res, next) => {
 
 app.use('/api/places', placesRoutes);
 app.use('/api/users', usersRoutes);
-app.use('/api-docs', swaggerUi.serve);
-app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 app.use((req, res, next) => {
   const error = new HttpError('could not find this route', 404);
