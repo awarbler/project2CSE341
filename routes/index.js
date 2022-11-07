@@ -5,8 +5,8 @@ const routes = express.Router();
 // const express = require('express');
 // const router = express.Router();
 routes.use('/', require('./swagger'));
-routes.use('/places', require('./places-routes'));
-routes.use('/user', require('./users-routes'));
+routes.use('/places', require('./places.routes'));
+routes.use('/user', require('./users.routes'));
 // routes.use(
 //   '/'
 // (docData = (req, res) => {

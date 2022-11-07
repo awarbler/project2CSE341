@@ -1,7 +1,7 @@
 const express = require('express');
 const { check } = require('express-validator');
 // mvc structure  //error handling
-const placesControllers = require('../controllers/places-controllers');
+const placesControllers = require('../controllers/places.controllers');
 const checkAuth = require('../middleware/auth');
 
 const router = express.Router();
