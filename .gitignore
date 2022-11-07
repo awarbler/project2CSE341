@@ -3,6 +3,7 @@
 node_modules
 .prettierrc
 .eslintrc
+.eslintrc.json
 
 # Logs
 logs
