@@ -59,13 +59,19 @@ app.use((error, req, res, next) => {
 });
 
 // establish a connection to the mongo database
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (err, res) => {
-  if (err) {
-    console.log('Connection failed: ' + err);
-  } else {
-    console.log('Connected to database!');
+mongoose.connect(
+  process.env.MONGODB_URI,
+  {
+    useNewUrlParser: true
+  },
+  (err, res) => {
+    if (err) {
+      console.log('Connection failed: ' + err);
+    } else {
+      console.log('Connected to database!');
+    }
   }
-});
+);
 
 // Define the port address and tell express to use this port
 const port = process.env.PORT || '8080';
