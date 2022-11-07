@@ -15,8 +15,8 @@ const swaggerDocument = require('./swagger.json');
 
 // import the routing file to handle the default (index) route
 // const index = require('./routes/app');
-const placesRoutes = require('./routes/places.routes');
-const usersRoutes = require('./routes/users.routes');
+const placesRoutes = require('./routes/places.route');
+const usersRoutes = require('./routes/users.route');
 const HttpError = require('./models/http-error');
 
 const app = express();
