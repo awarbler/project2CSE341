@@ -1,4 +1,3 @@
-//get dependencies basic routing
 const express = require('express');
 const bodyParser = require('body-parser');
 // const cors = require('cors');
@@ -7,6 +6,7 @@ const http = require('http');
 // const cookieParser = require('cookie-parser'); // do I need this?
 // const logger = require('morgan'); // w
 const mongoose = require('mongoose');
+
 const dotenv = require('dotenv');
 dotenv.config();
 

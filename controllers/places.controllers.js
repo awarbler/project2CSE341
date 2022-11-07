@@ -57,7 +57,7 @@ const createPlace = async (req, res, next) => {
     return next(new HttpError('Invalid inputs passed, please check your data', 422));
   } // validation
 
-  const { title, description, address, creator } = req.body;
+  const { title, description, address } = req.body;
 
   let coordinates;
   try {
@@ -72,12 +72,12 @@ const createPlace = async (req, res, next) => {
     address,
     location: coordinates,
     image: 'https://cdn.firespring.com/images/9e280abb-23b6-47e1-854c-e44fbb420f1d.jpg',
-    creator
+    creator: req.userData.userId
   });
   //does user id exist
   let user;
   try {
-    user = await User.findById(creator);
+    user = await User.findById(req.userData.userId);
   } catch (err) {
     const error = new HttpError('Creating a place failed , please try again', 500);
     return next(error);

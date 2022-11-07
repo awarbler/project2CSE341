@@ -6,17 +6,17 @@ const HttpError = require('../models/http-error');
 const User = require('../models/user');
 
 // eslint-disable-next-line no-unused-vars
-const DUMMY_USERS = [
-  {
-    id: 'u1',
-    firstName: 'Missy',
-    lastName: 'Warbler',
-    email: 'test@test.com',
-    password: 'testpassword',
-    places: 'p1',
-    birthday: ''
-  }
-];
+// const DUMMY_USERS = [
+//   {
+//     id: 'u1',
+//     firstName: 'Missy',
+//     lastName: 'Warbler',
+//     email: 'test@test.com',
+//     password: 'testpassword',
+//     places: 'p1',
+//     birthday: ''
+//   }
+// ];
 
 const getUsers = async (req, res, next) => {
   let users;
@@ -35,6 +35,7 @@ const signup = async (req, res, next) => {
   if (!errors.isEmpty()) {
     return next(new HttpError('Invalid inputs passed, please check your data', 422));
   } // validation
+
   const { firstName, lastName, email, password, birthday } = req.body;
 
   let existingUser;
@@ -54,7 +55,7 @@ const signup = async (req, res, next) => {
     hashedPassword = await bcrypt.hash(password, 12);
   } catch (err) {
     const error = new HttpError('Could not create user, please try again', 500);
-    return next(err);
+    return next(error);
   }
   const createdUser = new User({
     firstName,
@@ -100,7 +101,7 @@ const login = async (req, res, next) => {
   }
 
   if (!existingUser) {
-    const error = new HttpError('Invalid credentials, could not log you in', 401);
+    const error = new HttpError('Invalid credentials, could not log you in', 403);
     return next(error);
   }
 
